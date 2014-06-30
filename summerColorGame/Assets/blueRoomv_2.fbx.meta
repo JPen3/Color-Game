@@ -1,0 +1,735 @@
+fileFormatVersion: 2
+guid: d7f1c0533295e9c40abd95598dddb953
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: base
+    100002: bed
+    100004: //RootNode
+    100006: bowl
+    100008: box1
+    100010: box10
+    100012: box11
+    100014: box12
+    100016: box13
+    100018: box14
+    100020: box15
+    100022: box16
+    100024: box17
+    100026: box18
+    100028: box19
+    100030: box2
+    100032: box20
+    100034: box21
+    100036: box22
+    100038: box23
+    100040: box24
+    100042: box25
+    100044: box26
+    100046: box27
+    100048: box28
+    100050: box29
+    100052: box3
+    100054: box30
+    100056: box31
+    100058: box32
+    100060: box33
+    100062: box34
+    100064: box35
+    100066: box4
+    100068: box5
+    100070: box6
+    100072: box7
+    100074: box8
+    100076: box9
+    100078: Boxes
+    100080: boxes
+    100082: ceiling
+    100084: chair1
+    100086: chair10
+    100088: chair11
+    100090: chair12
+    100092: chair13
+    100094: chair2
+    100096: chair3
+    100098: chair4
+    100100: chair5
+    100102: chair6
+    100104: chair7
+    100106: chair8
+    100108: chair9
+    100110: Chairs
+    100112: closet
+    100114: ColBox
+    100116: ColBox2
+    100118: goblet
+    100120: group3
+    100122: group4
+    100124: group4 1
+    100126: group4 2
+    100128: group5
+    100130: group5 1
+    100132: group5 2
+    100134: pCube1
+    100136: pCube10
+    100138: pCube11
+    100140: pCube11 1
+    100142: pCube11 2
+    100144: pCube12
+    100146: pCube12 1
+    100148: pCube12 2
+    100150: pCube19
+    100152: pCube19 1
+    100154: pCube19 2
+    100156: pCube20
+    100158: pCube20 1
+    100160: pCube20 2
+    100162: pCube20 3
+    100164: pCube20 4
+    100166: pCube20 5
+    100168: pCube21
+    100170: pCube21 1
+    100172: pCube21 2
+    100174: pCube21 3
+    100176: pCube21 4
+    100178: pCube21 5
+    100180: pCube22
+    100182: pCube3
+    100184: pCube4
+    100186: pCube5
+    100188: pCube7
+    100190: pCube8
+    100192: pCube9
+    100194: polySurface2
+    100196: polySurface2 1
+    100198: polySurface2 2
+    100200: polySurface3
+    100202: polySurface3 1
+    100204: polySurface3 2
+    100206: polySurface4
+    100208: polySurface4 1
+    100210: polySurface4 2
+    100212: polySurface5
+    100214: polySurface6
+    100216: port
+    100218: port2
+    100220: port3
+    100222: port4
+    100224: poster
+    100226: poster2
+    100228: poster3
+    100230: pPlane1
+    100232: pPlane2
+    100234: rug
+    100236: rug1
+    100238: table
+    100240: table1
+    100242: table2
+    100244: tbear
+    100246: tbear1
+    100248: tbear2
+    100250: wall
+    400000: base
+    400002: bed
+    400004: //RootNode
+    400006: bowl
+    400008: box1
+    400010: box10
+    400012: box11
+    400014: box12
+    400016: box13
+    400018: box14
+    400020: box15
+    400022: box16
+    400024: box17
+    400026: box18
+    400028: box19
+    400030: box2
+    400032: box20
+    400034: box21
+    400036: box22
+    400038: box23
+    400040: box24
+    400042: box25
+    400044: box26
+    400046: box27
+    400048: box28
+    400050: box29
+    400052: box3
+    400054: box30
+    400056: box31
+    400058: box32
+    400060: box33
+    400062: box34
+    400064: box35
+    400066: box4
+    400068: box5
+    400070: box6
+    400072: box7
+    400074: box8
+    400076: box9
+    400078: Boxes
+    400080: boxes
+    400082: ceiling
+    400084: chair1
+    400086: chair10
+    400088: chair11
+    400090: chair12
+    400092: chair13
+    400094: chair2
+    400096: chair3
+    400098: chair4
+    400100: chair5
+    400102: chair6
+    400104: chair7
+    400106: chair8
+    400108: chair9
+    400110: Chairs
+    400112: closet
+    400114: ColBox
+    400116: ColBox2
+    400118: goblet
+    400120: group3
+    400122: group4
+    400124: group4 1
+    400126: group4 2
+    400128: group5
+    400130: group5 1
+    400132: group5 2
+    400134: pCube1
+    400136: pCube10
+    400138: pCube11
+    400140: pCube11 1
+    400142: pCube11 2
+    400144: pCube12
+    400146: pCube12 1
+    400148: pCube12 2
+    400150: pCube19
+    400152: pCube19 1
+    400154: pCube19 2
+    400156: pCube20
+    400158: pCube20 1
+    400160: pCube20 2
+    400162: pCube20 3
+    400164: pCube20 4
+    400166: pCube20 5
+    400168: pCube21
+    400170: pCube21 1
+    400172: pCube21 2
+    400174: pCube21 3
+    400176: pCube21 4
+    400178: pCube21 5
+    400180: pCube22
+    400182: pCube3
+    400184: pCube4
+    400186: pCube5
+    400188: pCube7
+    400190: pCube8
+    400192: pCube9
+    400194: polySurface2
+    400196: polySurface2 1
+    400198: polySurface2 2
+    400200: polySurface3
+    400202: polySurface3 1
+    400204: polySurface3 2
+    400206: polySurface4
+    400208: polySurface4 1
+    400210: polySurface4 2
+    400212: polySurface5
+    400214: polySurface6
+    400216: port
+    400218: port2
+    400220: port3
+    400222: port4
+    400224: poster
+    400226: poster2
+    400228: poster3
+    400230: pPlane1
+    400232: pPlane2
+    400234: rug
+    400236: rug1
+    400238: table
+    400240: table1
+    400242: table2
+    400244: tbear
+    400246: tbear1
+    400248: tbear2
+    400250: wall
+    2300000: bowl
+    2300002: box1
+    2300004: box10
+    2300006: box11
+    2300008: box12
+    2300010: box13
+    2300012: box14
+    2300014: box15
+    2300016: box16
+    2300018: box17
+    2300020: box18
+    2300022: box19
+    2300024: box2
+    2300026: box20
+    2300028: box21
+    2300030: box22
+    2300032: box23
+    2300034: box24
+    2300036: box25
+    2300038: box26
+    2300040: box27
+    2300042: box28
+    2300044: box29
+    2300046: box3
+    2300048: box30
+    2300050: box31
+    2300052: box32
+    2300054: box33
+    2300056: box34
+    2300058: box35
+    2300060: box4
+    2300062: box5
+    2300064: box6
+    2300066: box7
+    2300068: box8
+    2300070: box9
+    2300072: ceiling
+    2300074: chair1
+    2300076: chair10
+    2300078: chair11
+    2300080: chair12
+    2300082: chair13
+    2300084: chair2
+    2300086: chair3
+    2300088: chair4
+    2300090: chair5
+    2300092: chair6
+    2300094: chair7
+    2300096: chair8
+    2300098: chair9
+    2300100: closet
+    2300102: ColBox
+    2300104: ColBox2
+    2300106: goblet
+    2300108: pCube10
+    2300110: pCube11
+    2300112: pCube11 1
+    2300114: pCube11 2
+    2300116: pCube12
+    2300118: pCube12 1
+    2300120: pCube12 2
+    2300122: pCube19
+    2300124: pCube19 1
+    2300126: pCube19 2
+    2300128: pCube20
+    2300130: pCube20 1
+    2300132: pCube20 2
+    2300134: pCube20 3
+    2300136: pCube20 4
+    2300138: pCube20 5
+    2300140: pCube21
+    2300142: pCube21 1
+    2300144: pCube21 2
+    2300146: pCube21 3
+    2300148: pCube21 4
+    2300150: pCube21 5
+    2300152: pCube22
+    2300154: pCube3
+    2300156: pCube4
+    2300158: pCube5
+    2300160: pCube7
+    2300162: pCube8
+    2300164: pCube9
+    2300166: polySurface2
+    2300168: polySurface2 1
+    2300170: polySurface2 2
+    2300172: polySurface3
+    2300174: polySurface3 1
+    2300176: polySurface3 2
+    2300178: polySurface4
+    2300180: polySurface4 1
+    2300182: polySurface4 2
+    2300184: polySurface5
+    2300186: polySurface6
+    2300188: port
+    2300190: port2
+    2300192: port3
+    2300194: port4
+    2300196: poster
+    2300198: poster2
+    2300200: poster3
+    2300202: pPlane1
+    2300204: pPlane2
+    2300206: rug
+    2300208: rug1
+    2300210: wall
+    3300000: bowl
+    3300002: box1
+    3300004: box10
+    3300006: box11
+    3300008: box12
+    3300010: box13
+    3300012: box14
+    3300014: box15
+    3300016: box16
+    3300018: box17
+    3300020: box18
+    3300022: box19
+    3300024: box2
+    3300026: box20
+    3300028: box21
+    3300030: box22
+    3300032: box23
+    3300034: box24
+    3300036: box25
+    3300038: box26
+    3300040: box27
+    3300042: box28
+    3300044: box29
+    3300046: box3
+    3300048: box30
+    3300050: box31
+    3300052: box32
+    3300054: box33
+    3300056: box34
+    3300058: box35
+    3300060: box4
+    3300062: box5
+    3300064: box6
+    3300066: box7
+    3300068: box8
+    3300070: box9
+    3300072: ceiling
+    3300074: chair1
+    3300076: chair10
+    3300078: chair11
+    3300080: chair12
+    3300082: chair13
+    3300084: chair2
+    3300086: chair3
+    3300088: chair4
+    3300090: chair5
+    3300092: chair6
+    3300094: chair7
+    3300096: chair8
+    3300098: chair9
+    3300100: closet
+    3300102: ColBox
+    3300104: ColBox2
+    3300106: goblet
+    3300108: pCube10
+    3300110: pCube11
+    3300112: pCube11 1
+    3300114: pCube11 2
+    3300116: pCube12
+    3300118: pCube12 1
+    3300120: pCube12 2
+    3300122: pCube19
+    3300124: pCube19 1
+    3300126: pCube19 2
+    3300128: pCube20
+    3300130: pCube20 1
+    3300132: pCube20 2
+    3300134: pCube20 3
+    3300136: pCube20 4
+    3300138: pCube20 5
+    3300140: pCube21
+    3300142: pCube21 1
+    3300144: pCube21 2
+    3300146: pCube21 3
+    3300148: pCube21 4
+    3300150: pCube21 5
+    3300152: pCube22
+    3300154: pCube3
+    3300156: pCube4
+    3300158: pCube5
+    3300160: pCube7
+    3300162: pCube8
+    3300164: pCube9
+    3300166: polySurface2
+    3300168: polySurface2 1
+    3300170: polySurface2 2
+    3300172: polySurface3
+    3300174: polySurface3 1
+    3300176: polySurface3 2
+    3300178: polySurface4
+    3300180: polySurface4 1
+    3300182: polySurface4 2
+    3300184: polySurface5
+    3300186: polySurface6
+    3300188: port
+    3300190: port2
+    3300192: port3
+    3300194: port4
+    3300196: poster
+    3300198: poster2
+    3300200: poster3
+    3300202: pPlane1
+    3300204: pPlane2
+    3300206: rug
+    3300208: rug1
+    3300210: wall
+    4300000: pCube3
+    4300002: pCube4
+    4300004: pCube5
+    4300006: pPlane1
+    4300008: pPlane2
+    4300010: polySurface5
+    4300012: polySurface6
+    4300014: pCube7
+    4300016: pCube8
+    4300018: pCube9
+    4300020: pCube10
+    4300022: poster3
+    4300024: poster2
+    4300026: poster
+    4300028: pCube11
+    4300030: pCube12
+    4300032: polySurface2
+    4300034: polySurface4
+    4300036: polySurface3
+    4300038: wall
+    4300040: port
+    4300042: port4
+    4300044: port3
+    4300046: port2
+    4300048: pCube21
+    4300050: pCube20
+    4300052: pCube21
+    4300054: pCube20
+    4300056: pCube19
+    4300058: pCube21
+    4300060: pCube20
+    4300062: pCube21
+    4300064: pCube20
+    4300066: pCube19
+    4300068: pCube21
+    4300070: pCube20
+    4300072: pCube21
+    4300074: pCube20
+    4300076: pCube19
+    4300078: chair1
+    4300080: chair2
+    4300082: chair3
+    4300084: chair4
+    4300086: chair5
+    4300088: chair6
+    4300090: chair7
+    4300092: chair8
+    4300094: chair9
+    4300096: chair10
+    4300098: chair11
+    4300100: chair12
+    4300102: chair13
+    4300104: rug
+    4300106: pCube22
+    4300108: pCube11
+    4300110: pCube12
+    4300112: polySurface2
+    4300114: polySurface4
+    4300116: polySurface3
+    4300118: box1
+    4300120: box2
+    4300122: box3
+    4300124: box4
+    4300126: box5
+    4300128: box6
+    4300130: box7
+    4300132: box8
+    4300134: box9
+    4300136: box10
+    4300138: box11
+    4300140: box12
+    4300142: box13
+    4300144: box14
+    4300146: box15
+    4300148: box16
+    4300150: box17
+    4300152: box18
+    4300154: box19
+    4300156: box20
+    4300158: box21
+    4300160: box22
+    4300162: box23
+    4300164: box24
+    4300166: box25
+    4300168: box26
+    4300170: box27
+    4300172: box28
+    4300174: box29
+    4300176: box30
+    4300178: box31
+    4300180: box32
+    4300182: box33
+    4300184: box34
+    4300186: box35
+    4300188: pCube11
+    4300190: pCube12
+    4300192: polySurface2
+    4300194: polySurface4
+    4300196: polySurface3
+    4300198: rug1
+    4300200: ceiling
+    4300202: bowl
+    4300204: goblet
+    4300206: ColBox2
+    4300208: ColBox
+    4300210: closet
+    6400000: bowl
+    6400002: box1
+    6400004: box10
+    6400006: box11
+    6400008: box12
+    6400010: box13
+    6400012: box14
+    6400014: box15
+    6400016: box16
+    6400018: box17
+    6400020: box18
+    6400022: box19
+    6400024: box2
+    6400026: box20
+    6400028: box21
+    6400030: box22
+    6400032: box23
+    6400034: box24
+    6400036: box25
+    6400038: box26
+    6400040: box27
+    6400042: box28
+    6400044: box29
+    6400046: box3
+    6400048: box30
+    6400050: box31
+    6400052: box32
+    6400054: box33
+    6400056: box34
+    6400058: box35
+    6400060: box4
+    6400062: box5
+    6400064: box6
+    6400066: box7
+    6400068: box8
+    6400070: box9
+    6400072: ceiling
+    6400074: chair1
+    6400076: chair10
+    6400078: chair11
+    6400080: chair12
+    6400082: chair13
+    6400084: chair2
+    6400086: chair3
+    6400088: chair4
+    6400090: chair5
+    6400092: chair6
+    6400094: chair7
+    6400096: chair8
+    6400098: chair9
+    6400100: closet
+    6400102: ColBox
+    6400104: ColBox2
+    6400106: goblet
+    6400108: pCube10
+    6400110: pCube11
+    6400112: pCube11 1
+    6400114: pCube11 2
+    6400116: pCube12
+    6400118: pCube12 1
+    6400120: pCube12 2
+    6400122: pCube19
+    6400124: pCube19 1
+    6400126: pCube19 2
+    6400128: pCube20
+    6400130: pCube20 1
+    6400132: pCube20 2
+    6400134: pCube20 3
+    6400136: pCube20 4
+    6400138: pCube20 5
+    6400140: pCube21
+    6400142: pCube21 1
+    6400144: pCube21 2
+    6400146: pCube21 3
+    6400148: pCube21 4
+    6400150: pCube21 5
+    6400152: pCube22
+    6400154: pCube3
+    6400156: pCube4
+    6400158: pCube5
+    6400160: pCube7
+    6400162: pCube8
+    6400164: pCube9
+    6400166: polySurface2
+    6400168: polySurface2 1
+    6400170: polySurface2 2
+    6400172: polySurface3
+    6400174: polySurface3 1
+    6400176: polySurface3 2
+    6400178: polySurface4
+    6400180: polySurface4 1
+    6400182: polySurface4 2
+    6400184: polySurface5
+    6400186: polySurface6
+    6400188: port
+    6400190: port2
+    6400192: port3
+    6400194: port4
+    6400196: poster
+    6400198: poster2
+    6400200: poster3
+    6400202: pPlane1
+    6400204: pPlane2
+    6400206: rug
+    6400208: rug1
+    6400210: wall
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
