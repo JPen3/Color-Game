@@ -5,28 +5,26 @@ public class itemPickup : MonoBehaviour {
 	public bool redLens = false;
 	public bool greenLens = false;
 	public bool blueLens = false;
-	public bool redKey = false;
-	public bool greenKey = false;
-	public bool blueKey = false;
-	public bool doorMagenta = false;
+
+	public bool magentaKey = false;
+	public bool yellowKey = false;
+	public bool cyanKey = false;
+
+	public bool doorRRMagenta = false;
+	public bool doorRRYellow = false;
+
 	public bool doorBRMagenta = false;
-	public bool doorYellow = false;
+	public bool doorBRCyan = false;
+	
 	public bool doorGRYellow = false;
-	public bool doorCyan = false;
+	public bool doorGRCyan = false;
 
 	private int redKeyCount = 0;
 	private int greenKeyCount = 0;
 	private int blueKeyCount = 0;
 
-	//GameObject rKObject = GameObject.Find;
-	//GameObject gKObject = GameObject.Find ("RRgreenKey");
-	//GameObject bKObject = GameObject.Find ("RRblueKey");
-
 	// Use this for initialization
 	void Start () {
-		//GameObject rKObject = GameObject.FindGameObjectWithTag ("redKey");
-		//GameObject gKObject = GameObject.FindGameObjectWithTag ("greenKey");
-		//GameObject bKObject = GameObject.FindGameObjectWithTag ("blueKey");
 	}
 	
 	// Update is called once per frame
@@ -34,10 +32,6 @@ public class itemPickup : MonoBehaviour {
 		Ray ray = Camera.mainCamera.ViewportPointToRay (new Vector3 (0.5f, 0.5f, 0f));
 		Debug.DrawRay (ray.origin, ray.direction * 10, Color.cyan);
 		RaycastHit hit;
-
-		//Debug.Log ("Red Key " +redKey);
-		//Debug.Log ("Green Key " +greenKey);
-		//Debug.Log ("Blue Key " +blueKey);
 
 		if(Input.GetMouseButtonDown(0))
 		{
@@ -59,137 +53,90 @@ public class itemPickup : MonoBehaviour {
 						blueLens = true;
 						Destroy(hit.transform.gameObject);
 						break;
-					case "redKey":
-						redKey = true;
-						blueKey = false;
-						greenKey = false;
-						redKeyCount++;
-						//hit.transform.gameObject.renderer.enabled = false;
-						//GameObject.FindGameObjectWithTag("redKey").renderer.enabled = false;
-						//gKObject.renderer.enabled = true;
-						//bKObject.renderer.enabled = true;
-						//GameObject.FindGameObjectWithTag("blueKey").renderer.enabled = true;
-						//Destroy(hit.transform.gameObject);
+					case "magentaKey":
+						magentaKey = true;
+						yellowKey = false;
+						cyanKey = false;
 						break;
-					case "blueKey":
-						redKey = false;
-						blueKey = true;
-						greenKey = false;
-						blueKeyCount++;
-						//hit.transform.gameObject.renderer.enabled = false;
-						//gKObject.renderer.enabled = true;
-						//rKObject.renderer.enabled = true;
-						//GameObject.FindGameObjectWithTag("redKey").renderer.enabled = true;
-						//GameObject.FindGameObjectWithTag("greenKey").renderer.enabled = true;
-						//GameObject.FindGameObjectWithTag("blueKey").renderer.enabled = false;
-						//Destroy(hit.transform.gameObject);
+					case "yellowKey":
+						magentaKey = false;
+						yellowKey = true;
+						cyanKey = false;
 						break;
-					case "greenKey":
-						redKey = false;
-						blueKey = false;
-						greenKey = true;
-						greenKeyCount++;
-						//hit.transform.gameObject.renderer.enabled = false;
-						//rKObject.renderer.enabled = true;
-						//bKObject.renderer.enabled = true;
-						//GameObject.FindGameObjectWithTag("redKey").renderer.enabled = true;
-						//GameObject.FindGameObjectWithTag("greenKey").renderer.enabled = false;
-						//GameObject.FindGameObjectWithTag("blueKey").renderer.enabled = true;
-						//Debug.Log ("greenKey count " +greenKeyCount);
-						//Destroy(hit.transform.gameObject);
+					case "cyanKey":
+						magentaKey = false;
+						yellowKey = false;
+						cyanKey = true;
 						break;
-					case "doorMagenta":
-						if(blueKey)
+					case "doorRRMagenta":
+						if(yellowKey)
 						{
-							doorMagenta = true;
-							blueKeyCount--;
-							//if(blueKeyCount < 1)
-							//{
-								blueKey = false;
-							//}
+							doorRRMagenta = true;
+							//blueKeyCount--;
+							yellowKey = false;
 						}
 						else
 						{
-							doorMagenta = false;
+							doorRRMagenta = false;
 						}
 						break;
 					case "doorBRMagenta":
-						if(redKey)
+						if(cyanKey)
 						{
 							doorBRMagenta = true;
-							redKeyCount--;
-							//if(redKeyCount < 1)
-							//{
-								redKey = false;
-							//}
+							//redKeyCount--;
+							cyanKey = false;
 						}
 						else
 						{
 							doorBRMagenta = false;
 						}
 						break;
-					case "doorYellow":
-						if(greenKey)
+					case "doorRRYellow":
+						if(magentaKey)
 						{
-							doorYellow = true;
-							greenKeyCount--;
-							Debug.Log ("greenKey count " +greenKeyCount);
-							//if(greenKeyCount < 1)
-							//{
-								Debug.Log ("greenKey " +greenKey);
-								greenKey = false;
-							//}
+							doorRRYellow = true;
+							//greenKeyCount--;
+							//Debug.Log ("greenKey count " +greenKeyCount);
+							//Debug.Log ("greenKey " +greenKey);
+							magentaKey = false;
 						}
 						else
 						{
-							doorYellow = false;
+							doorRRYellow = false;
 						}
 						break;
 					case "doorGRYellow":
-						if(greenKey)
+						if(cyanKey)
 						{
 							doorGRYellow = true;
-							greenKeyCount--;
-							Debug.Log ("greenKey count " +greenKeyCount);
-							if(greenKeyCount < 1)
-							{
-								Debug.Log ("greenKey " +greenKey);
-								greenKey = false;
-							}
+							cyanKey = false;
 						}
 						else
 						{
 							doorGRYellow = false;
 						}
 						break;
-					case "doorCyan":
-						if(redKey)
+					case "doorBRCyan":
+						if(magentaKey)
 						{
-							doorCyan = true;
-							redKeyCount--;
-							if(redKeyCount < 1)
-							{
-								redKey = false;
-							}
+							doorBRCyan = true;
+							magentaKey = false;
 						}
 						else
 						{
-							doorCyan = false;
+							doorBRCyan = false;
 						}
 						break;
-					case "doorBRCyan":
-						if(redKey)
+					case "doorGRCyan":
+						if(yellowKey)
 						{
-							doorCyan = true;
-							redKeyCount--;
-							if(redKeyCount < 1)
-							{
-								redKey = false;
-							}
+							doorGRCyan = true;
+							yellowKey = false;
 						}
 						else
 						{
-							doorCyan = false;
+							doorGRCyan = false;
 						}
 						break;
 					}
