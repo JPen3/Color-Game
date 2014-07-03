@@ -1,20 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\yellowGRControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\cyanExit.cs">
     <Files>
-      <File FileName="Assets\scripts\itemPickup.cs" Line="23" Column="4" />
-      <File FileName="Assets\scripts\openDoor1.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\yellowExit.cs" Line="24" Column="54" />
-      <File FileName="Assets\scripts\yellowInk.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\closeDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\openDoor.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\closeDoor1.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\blueKey.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\greenKey.cs" Line="22" Column="4" />
-      <File FileName="Assets\scripts\redKey.cs" Line="14" Column="18" />
-      <File FileName="Assets\scripts\magentaBRControl.cs" Line="20" Column="53" />
-      <File FileName="Assets\scripts\yellowGRControl.cs" Line="80" Column="51" />
-      <File FileName="Assets\scripts\yellowExit1.cs" Line="36" Column="27" />
+      <File FileName="Assets\scripts\cyanBRControl.cs" Line="80" Column="56" />
+      <File FileName="Assets\scripts\magentaBRControl.cs" Line="96" Column="3" />
+      <File FileName="Assets\scripts\cyanExit.cs" Line="24" Column="52" />
+      <File FileName="Assets\scripts\magentaExit.cs" Line="65" Column="3" />
+      <File FileName="Assets\scripts\itemPickup.cs" Line="200" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

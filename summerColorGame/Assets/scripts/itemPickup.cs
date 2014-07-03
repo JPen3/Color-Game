@@ -177,6 +177,21 @@ public class itemPickup : MonoBehaviour {
 							doorCyan = false;
 						}
 						break;
+					case "doorBRCyan":
+						if(redKey)
+						{
+							doorCyan = true;
+							redKeyCount--;
+							if(redKeyCount < 1)
+							{
+								redKey = false;
+							}
+						}
+						else
+						{
+							doorCyan = false;
+						}
+						break;
 					}
 			}
 		}
