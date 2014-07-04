@@ -79,6 +79,7 @@
      <Compile Include="Assets\scripts\White Room\redControl.cs" />
      <Compile Include="Assets\scripts\colorToggle.cs" />
      <Compile Include="Assets\scripts\itemPickup.cs" />
+     <Compile Include="Assets\scripts\roomsLoaded.cs" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\iTweenEditor\README.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">

@@ -22,7 +22,7 @@ public class cyanGRExit : MonoBehaviour {
 		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
 		iPObject = playerObject.GetComponent<itemPickup> ();
 		
-		this.objects = Resources.LoadAll ("exitDoorBRcyan", typeof(Texture));
+		this.objects = Resources.LoadAll ("exitDoorGRcyan", typeof(Texture));
 		this.textures = new Texture[objects.Length];
 		
 		for(int i=0; i < objects.Length; i++)

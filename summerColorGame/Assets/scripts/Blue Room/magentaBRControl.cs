@@ -8,25 +8,45 @@ public class magentaBRControl : MonoBehaviour {
 	string eventName2 = "closedoor";
 
 	private magentaBRExit mEObject;
+	private roomsLoaded rLObject;
 
-	public bool initialLock = false;
-	public bool isLocked = false;
-	public bool isOpen = true;
+	private bool initialLock = false;
+	private bool isLocked = true;
+	private bool isOpen = false;
+	private bool isLoaded = false;
 	
 	// Use this for initialization
 	void Start () {
+		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
+		rLObject = playerObject.GetComponent<roomsLoaded> ();
 		
 		GameObject doorMagenta = GameObject.FindGameObjectWithTag ("doorBRMagenta");
 		mEObject = doorMagenta.GetComponent<magentaBRExit> ();
+
+		rLObject.setBlueLock (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (rLObject.getBlueLock ())
+		{
+			initialLock = true;
+			//isLocked = true;
+			//isOpen = false;
+		}
+
+		isLoaded = rLObject.getRedRoom ();
+
 		Debug.Log("Magenta Animation Blue Room " +mEObject.aniTexDone);
 		Debug.Log("Magenta locked Blue Room " +isLocked);
 		if(mEObject.aniTexDone && isLocked)
 		{
 			Debug.Log("Magenta Door opens Blue Room");
+			if(!isLoaded)
+			{
+				Application.LoadLevelAdditiveAsync("redRum");
+				rLObject.setRedRoom(true);
+			}
 			iTweenEvent.GetEvent (GameObject.Find ("hingeBRMagenta"), eventName1).Play ();
 			//oDObject.setOpen();
 			isLocked = false;
@@ -41,20 +61,18 @@ public class magentaBRControl : MonoBehaviour {
 		{
 			if(other.collider.gameObject.CompareTag ("Player"))
 			{
-				//Debug.Log("Magenta Door opens");
-				//iTweenEvent.GetEvent (GameObject.Find ("hingeBRMagenta"), eventName1).Play ();
 				iTweenEvent.GetEvent (GameObject.Find ("hingeBRMagenta"), eventName1).Play ();
-				//oDObject.setOpen();
+				rLObject.setBlueLock(true);
 				initialLock = true;
 				isLocked = true;
-				//isClosed = false;
+				isOpen = true;
 			}
 		}
 		else if(mEObject.aniTexDone && !isOpen)
 		{
 			Debug.Log("Magenta Door opens");
 			iTweenEvent.GetEvent (GameObject.Find ("hingeBRMagenta"), eventName1).Play ();
-			//oDObject.setOpen();
+			isLocked = false;
 			isOpen = true;
 		}
 	}

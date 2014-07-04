@@ -7,31 +7,44 @@ public class magentaRRControl : MonoBehaviour {
 	string eventName2 = "closedoor";
 	
 	private magentaRRExit mEObject;
+	private roomsLoaded rLObject;
 	
-	public bool initialLock = true;
-	public bool isLocked = true;
-	public bool isOpen = false;
-	public bool isLoaded = false;
+	private bool initialLock = false;
+	private bool isLocked = true;
+	private bool isOpen = false;
+	private bool isLoaded = false;
 	
 	// Use this for initialization
 	void Start () {
+		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
+		rLObject = playerObject.GetComponent<roomsLoaded> ();
+
 		GameObject doorMagenta = GameObject.FindGameObjectWithTag ("doorRRMagenta");
 		mEObject = doorMagenta.GetComponent<magentaRRExit> ();
+
+		//rLObject.setRedLock (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (rLObject.getRedLock ())
+		{
+			initialLock = true;
+		}
+
+		isLoaded = rLObject.getBlueRoom ();
+
 		if(mEObject.aniTexDone && isLocked)
 		{
 			Debug.Log("Red Room's Magenta Door opens");
 			if(!isLoaded)
 			{
 				Application.LoadLevelAdditiveAsync("blueDaDaDee");
+				rLObject.setBlueRoom(true);
 			}
 			iTweenEvent.GetEvent (GameObject.Find ("hingeRRMagenta"), eventName1).Play ();
 			isLocked = false;
 			isOpen = true;
-			isLoaded = true;
 		}
 	}
 	
@@ -42,15 +55,18 @@ public class magentaRRControl : MonoBehaviour {
 		{
 			if(other.collider.gameObject.CompareTag ("Player"))
 			{
-				//Debug.Log("Magenta Door opens");
-				iTweenEvent.GetEvent (GameObject.Find ("hingeRRMagenta"), eventName2).Play ();
+				iTweenEvent.GetEvent (GameObject.Find ("hingeRRMagenta"), eventName1).Play ();
+				rLObject.setRedLock(true);
 				initialLock = true;
+				isLocked = true;
+				isOpen = true;
 			}
 		}
 		else if(mEObject.aniTexDone && !isOpen)
 		{
 			Debug.Log("Cyan Door opens");
 			iTweenEvent.GetEvent (GameObject.Find ("hingeRRMagenta"), eventName1).Play ();
+			isLocked = false;
 			isOpen = true;
 		}
 	}

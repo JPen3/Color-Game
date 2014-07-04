@@ -19,6 +19,10 @@ public class colorToggle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log ("Red " + redOn);
+		Debug.Log ("Green " + greenOn);
+		Debug.Log ("Blue " + blueOn);
+
 		if(iPObject.redLens)
 		{
 			if (Input.GetButtonDown ("toggleRed") && redOn == false) {

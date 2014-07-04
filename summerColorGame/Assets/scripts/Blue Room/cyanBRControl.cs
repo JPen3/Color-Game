@@ -7,19 +7,34 @@ public class cyanBRControl : MonoBehaviour {
 	string eventName2 = "closedoor";
 
 	private cyanBRExit cEObject;
+	private roomsLoaded rLObject;
 	
-	public bool initialLock = true;
-	public bool isLocked = true;
-	public bool isOpen = false;
+	private bool initialLock = false;
+	private bool isLocked = true;
+	private bool isOpen = false;
 	
 	// Use this for initialization
 	void Start () {
+		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
+		rLObject = playerObject.GetComponent<roomsLoaded> ();
+
 		GameObject doorCyan = GameObject.FindGameObjectWithTag ("doorBRCyan");
 		cEObject = doorCyan.GetComponent<cyanBRExit> ();
+
+		rLObject.setBlueLock (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log("Cyan Door " +isOpen);
+
+		if (rLObject.getBlueLock ())
+		{
+			initialLock = true;
+			//isLocked = true;
+			//isOpen = false;
+		}
+
 		if(cEObject.aniTexDone && isLocked)
 		{
 			Debug.Log("Cyan Door opens");
@@ -38,11 +53,12 @@ public class cyanBRControl : MonoBehaviour {
 			if(other.collider.gameObject.CompareTag ("Player"))
 			{
 				//Debug.Log("Magenta Door opens");
-				//iTweenEvent.GetEvent (GameObject.Find ("hingeBRmagenta"), eventName1).Play ();
 				iTweenEvent.GetEvent (GameObject.Find ("hingeBRCyan"), eventName2).Play ();
 				//oDObject.setOpen();
+				rLObject.setBlueLock(true);
 				initialLock = true;
-				//isClosed = false;
+				isLocked = true;
+				isOpen = true;
 			}
 		}
 		else if(cEObject.aniTexDone && !isOpen)

@@ -7,6 +7,7 @@ public class magentaKey : MonoBehaviour {
 	private colorToggle cTObject;
 	
 	private bool red = false;
+	private bool green = false;
 	private bool blue = false;
 	
 	// Use this for initialization
@@ -23,13 +24,14 @@ public class magentaKey : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		red = cTObject.getRed();
-		blue = cTObject.getBlue();
+		green = cTObject.getGreen();
+		blue = cTObject.getBlue ();
 
-		if (iPObject.magentaKey|| (!red || !blue))
+		if (iPObject.magentaKey|| (!red || !blue || green))
 		{
 			renderer.enabled = false;
 		}
-		else if (red && blue)
+		else if (red && !green && blue)
 		{
 			renderer.enabled = true;
 		}

@@ -5,8 +5,9 @@ public class cyanKey : MonoBehaviour {
 	private itemPickup iPObject;
 	private colorToggle cTObject;
 	
-	private bool blue = false;
+	private bool red = false;
 	private bool green = false;
+	private bool blue = false;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,14 +22,15 @@ public class cyanKey : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		blue = cTObject.getBlue();
+		red = cTObject.getRed();
 		green = cTObject.getGreen();
+		blue = cTObject.getBlue ();
 
-		if (iPObject.cyanKey || (!blue || !green))
+		if (iPObject.cyanKey || (!blue || !green || red))
 		{
 			renderer.enabled = false;
 		}
-		else if (blue && green)
+		else if (!red && green && blue)
 		{
 			renderer.enabled = true;
 		}

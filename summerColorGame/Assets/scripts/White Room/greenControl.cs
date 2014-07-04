@@ -5,7 +5,7 @@ public class greenControl : MonoBehaviour {
 	string eventName1 = "opendoor";
 	string eventName2 = "closedoor";
 	
-	private magentaRRExit mEObject;
+	private roomsLoaded rLObject;
 	
 	public bool initialLock = true;
 	public bool isLocked = true;
@@ -14,48 +14,29 @@ public class greenControl : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		//GameObject doorMagenta = GameObject.FindGameObjectWithTag ("doorRRMagenta");
-		//mEObject = doorMagenta.GetComponent<magentaRRExit> ();
+		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
+		rLObject = playerObject.GetComponent<roomsLoaded> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		/*if(mEObject.aniTexDone && isLocked)
-		{
-			Debug.Log("Red Room's Magenta Door opens");
-			if(!isLoaded)
-			{
-				Application.LoadLevelAdditiveAsync("blueDaDaDee");
-			}
-			iTweenEvent.GetEvent (GameObject.Find ("hingeRRMagenta"), eventName1).Play ();
-			isLocked = false;
-			isOpen = true;
-			isLoaded = true;
-		}*/
+
 	}
 	
 	void OnTriggerEnter(Collider other)
 	{
-		//Debug.Log ("You in the Blue Room Cyan Trigger");
-		/*if(!initialLock)
-		{
-			if(other.collider.gameObject.CompareTag ("Player"))
-			{
-				//Debug.Log("Magenta Door opens");
-				iTweenEvent.GetEvent (GameObject.Find ("hingeRRMagenta"), eventName2).Play ();
-				initialLock = true;
-			}
-		}*/
+		isLoaded = rLObject.getGreenRoom ();
 		if(!isOpen)
 		{
-			Debug.Log("Red Door opens");
+			Debug.Log("Green Door opens");
 			if(!isLoaded)
 			{
 				Application.LoadLevelAdditiveAsync("greenRoom");
+				rLObject.setGreenRoom(true);
+				isLoaded = rLObject.getGreenRoom ();
 			}
 			iTweenEvent.GetEvent (GameObject.Find ("hingeGreen"), eventName1).Play ();
 			isOpen = true;
-			isLoaded = true;
 		}
 	}
 	

@@ -7,25 +7,34 @@ public class cyanGRControl : MonoBehaviour {
 	string eventName2 = "closedoor";
 
 	private cyanGRExit cEObject;
+	private roomsLoaded rLObject;
 	
-	public bool initialLock = true;
-	public bool isLocked = true;
-	public bool isOpen = false;
+	private bool initialLock = false;
+	private bool isLocked = true;
+	private bool isOpen = false;
 	
 	// Use this for initialization
 	void Start () {
+		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
+		rLObject = playerObject.GetComponent<roomsLoaded> ();
 		
-		GameObject doorCyan = GameObject.FindGameObjectWithTag ("doorBRCyan");
+		GameObject doorCyan = GameObject.FindGameObjectWithTag ("doorGRCyan");
 		cEObject = doorCyan.GetComponent<cyanGRExit> ();
+
+		rLObject.setGreenLock (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (rLObject.getGreenLock ())
+		{
+			initialLock = true;
+		}
+
 		if(cEObject.aniTexDone && isLocked)
 		{
 			Debug.Log("Cyan Door opens");
-			iTweenEvent.GetEvent (GameObject.Find ("hingeBRcyan"), eventName2).Play ();
-			//oDObject.setOpen();
+			iTweenEvent.GetEvent (GameObject.Find ("hingeGRCyan"), eventName2).Play ();
 			isLocked = false;
 			isOpen = true;
 		}
@@ -38,45 +47,29 @@ public class cyanGRControl : MonoBehaviour {
 		{
 			if(other.collider.gameObject.CompareTag ("Player"))
 			{
-				//Debug.Log("Magenta Door opens");
-				//iTweenEvent.GetEvent (GameObject.Find ("hingeBRmagenta"), eventName1).Play ();
-				iTweenEvent.GetEvent (GameObject.Find ("hingeBRcyan"), eventName2).Play ();
-				//oDObject.setOpen();
+				iTweenEvent.GetEvent (GameObject.Find ("hingeGRCyan"), eventName2).Play ();
+				rLObject.setGreenLock(true);
 				initialLock = true;
-				//isClosed = false;
+				isLocked = true;
+				isOpen = true;
 			}
 		}
 		else if(cEObject.aniTexDone && !isOpen)
 		{
 			Debug.Log("Cyan Door opens");
-			iTweenEvent.GetEvent (GameObject.Find ("hingeGRcyan"), eventName2).Play ();
-			//oDObject.setOpen();
+			iTweenEvent.GetEvent (GameObject.Find ("hingeGRCyan"), eventName2).Play ();
+			isLocked = false;
 			isOpen = true;
 		}
 	}
 	
 	void OnTriggerExit(Collider other)
 	{
-		/*if(initialLock)
-		{
-			if(other.collider.gameObject.CompareTag ("Player"))
-			{
-				Debug.Log("I'm Batman!");
-				iTweenEvent.GetEvent (GameObject.Find ("hingeBRmagenta"), eventName0).Play ();
-				//oDObject.setOpen();
-				//initialLock = false;
-				isLocked = true;
-				isOpen = false;
-			}
-		}*/
 		if (isOpen)
 		{
 			if(other.collider.gameObject.CompareTag ("Player"))
 			{
-				//Debug.Log("Magenta Door closes");
-				iTweenEvent.GetEvent (GameObject.Find ("hingeGRcyan"), eventName1).Play ();
-				//oDObject.setOpen();
-				//initialLock = true;
+				iTweenEvent.GetEvent (GameObject.Find ("hingeGRCyan"), eventName1).Play ();
 				isOpen = false;
 			}
 		}

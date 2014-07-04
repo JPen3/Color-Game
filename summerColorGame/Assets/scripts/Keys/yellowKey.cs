@@ -7,6 +7,7 @@ public class yellowKey : MonoBehaviour {
 
 		private bool red = false;
 		private bool green = false;
+		private bool blue = false;
 
 		// Use this for initialization
 		void Start () {
@@ -23,12 +24,13 @@ public class yellowKey : MonoBehaviour {
 		void Update () {
 			red = cTObject.getRed();
 			green = cTObject.getGreen();
+			blue = cTObject.getBlue ();
 
-			if (iPObject.yellowKey || (!red || !green))
+			if (iPObject.yellowKey || (!red || !green || blue))
 			{
 				renderer.enabled = false;
 			}
-			else if (red && green)
+			else if (red && green && !blue)
 			{
 				renderer.enabled = true;
 			}

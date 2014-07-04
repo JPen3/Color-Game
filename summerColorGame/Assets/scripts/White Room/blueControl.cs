@@ -5,7 +5,7 @@ public class blueControl : MonoBehaviour {
 	string eventName1 = "opendoor";
 	string eventName2 = "closedoor";
 	
-	private magentaRRExit mEObject;
+	private roomsLoaded rLObject;
 	
 	public bool initialLock = true;
 	public bool isLocked = true;
@@ -14,8 +14,8 @@ public class blueControl : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		//GameObject doorMagenta = GameObject.FindGameObjectWithTag ("doorRRMagenta");
-		//mEObject = doorMagenta.GetComponent<magentaRRExit> ();
+		GameObject playerObject = GameObject.FindGameObjectWithTag ("Player");
+		rLObject = playerObject.GetComponent<roomsLoaded> ();
 	}
 	
 	// Update is called once per frame
@@ -46,16 +46,18 @@ public class blueControl : MonoBehaviour {
 				initialLock = true;
 			}
 		}*/
+		isLoaded = rLObject.getBlueRoom ();
 		if(!isOpen)
 		{
-			Debug.Log("Red Door opens");
+			Debug.Log("Blue Door opens");
 			if(!isLoaded)
 			{
 				Application.LoadLevelAdditiveAsync("blueDaDaDee");
+				rLObject.setBlueRoom(true);
+				isLoaded = rLObject.getBlueRoom ();
 			}
 			iTweenEvent.GetEvent (GameObject.Find ("hingeBlue"), eventName1).Play ();
 			isOpen = true;
-			isLoaded = true;
 		}
 	}
 	
