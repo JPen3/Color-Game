@@ -1,12 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\White Room\greenControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\Keys\magentaKey.cs">
     <Files>
-      <File FileName="Assets\scripts\Red Room\magentaRRControl.cs" Line="79" Column="3" />
-      <File FileName="Assets\scripts\White Room\redControl.cs" Line="70" Column="53" />
-      <File FileName="Assets\scripts\White Room\blueControl.cs" Line="70" Column="54" />
-      <File FileName="Assets\scripts\White Room\greenControl.cs" Line="70" Column="55" />
-      <File FileName="Assets\scripts\Blue Room\cyanBRInk.cs" Line="24" Column="1" />
+      <File FileName="Assets\scripts\Keys\yellowKey.cs" Line="31" Column="26" />
+      <File FileName="Assets\scripts\Keys\cyanKey.cs" Line="23" Column="18" />
+      <File FileName="Assets\scripts\Keys\magentaKey.cs" Line="24" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

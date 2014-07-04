@@ -61,4 +61,16 @@ public class colorToggle : MonoBehaviour {
 		light.color = c;
 
 	}
+	public bool getRed()
+	{
+		return redOn;
+	}
+	public bool getGreen()
+	{
+		return greenOn;
+	}
+	public bool getBlue()
+	{
+		return blueOn;
+	}
 }
