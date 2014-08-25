@@ -56,7 +56,7 @@ public class yellowRRControl : MonoBehaviour {
 			if(other.collider.gameObject.CompareTag ("Player"))
 			{
 				//Debug.Log("Magenta Door opens");
-				iTweenEvent.GetEvent (GameObject.Find ("hingeRRYellow"), eventName2).Play ();
+				iTweenEvent.GetEvent (GameObject.Find ("hingeRRYellow"), eventName1).Play ();
 				rLObject.setRedLock(true);
 				initialLock = true;
 				isLocked = true;
